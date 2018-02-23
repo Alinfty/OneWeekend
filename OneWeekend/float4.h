@@ -2,6 +2,7 @@
 
 #ifndef __MULTI_
 
+#define _USE_MATH_DEFINES //M_PI를 사용할 수 있게 해줌.
 #include <cmath>
 #include <algorithm>
 
@@ -46,7 +47,7 @@ public:
 	float4 &operator-= (const float4 &b) { e[0] -= b[0]; e[1] -= b[1]; e[2] -= b[2]; e[3] -= b[3]; return *this; }
 	float4 &operator*= (const float4 &b) { e[0] *= b[0]; e[1] *= b[1]; e[2] *= b[2]; e[3] *= b[3]; return *this; }
 	float4 &operator*= (const float b) { e[0] *= b; e[1] *= b; e[2] *= b; e[3] *= b; return *this; }
-	float4 &operator/= (const float b) { e[0] /= b; e[1] /= b; e[2] /= b; e[3] /= b; return *this; }
+	float4 &operator/= (const float b)  { e[0] /= b; e[1] /= b; e[2] /= b; e[3] /= b; return *this; }
 
 	float4 &normalize() {
 		float l = sqrt(e[0] * e[0] + e[1] * e[1] + e[2] * e[2] + e[3] * e[3]);
